@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- BEGIN trusty core projects -->
+  <project path="trusty_os/external/lk" name="trusty/lk/common" groups="trusty" >
+    <copyfile src="makefile" dest="makefile" />
+  </project>
+  <project path="trusty_os/external/headers" name="trusty/external/headers" groups="trusty" />
+  <project path="trusty_os/lib" name="trusty/lib" groups="trusty" />
+  <project path="trusty_os/lk/trusty" name="trusty/lk/trusty" groups="trusty" />
+  <!-- END trusty core projects -->
+
+  <!-- BEGIN apps projects  -->
+  <project path="trusty_os/app/sample" name="trusty/app/sample" groups="trusty" />
+  <project path="trusty_os/app/keymaster" name="trusty/app/keymaster" groups="trusty" />
+  <project path="trusty_os/app/gatekeeper" name="trusty/app/gatekeeper" groups="trusty" />
+  <project path="trusty_os/app/storage" name="trusty/app/storage" groups="trusty" />
+  <!-- END apps projects -->
+
+  <!-- BEGIN platform projects -->
+  <project path="trusty_os/hardware/libhardware" name="platform/hardware/libhardware" groups="trusty" />
+  <project path="trusty_os/system/keymaster" name="platform/system/keymaster" groups="trusty" />
+  <project path="trusty_os/system/gatekeeper" name="platform/system/gatekeeper" groups="trusty" />
+  <project path="trusty_os/external/openssl" name="platform/external/boringssl" groups="trusty" />
+  <!-- END platform projects -->
+
+  <!-- BEGIN trusty device projects -->
+  <project path="trusty_os/device/arm/generic-arm64" name="trusty/device/arm/generic-arm64" groups="trusty" />
+  <project path="trusty_os/device/arm/vexpress-a15" name="trusty/device/arm/vexpress-a15" groups="trusty" />
+  <!-- END trusty device projects -->
+
+  <!-- BEGIN trusty vendor projects -->
+  <project path="trusty_os/vendor/google/aosp" name="trusty/vendor/google/aosp" groups="trusty" >
+   <!-- Install lk_inc.mk into trusty root -->
+    <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
+  </project>
+  <!-- END trusty vendor projects -->
+
+  <!-- BEGIN toolchains -->
+  <project path="trusty_os/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8" groups="trusty" />
+  <project path="trusty_os/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="trusty" />
+  <!-- END toolchains -->
+
+  <!-- BEGIN aux external projects -->
+  <!--
+  <project path="external/qemu" name="trusty/external/qemu" groups="trusty" />
+  -->
+  <!-- END aux external projects -->
+
+</manifest>
