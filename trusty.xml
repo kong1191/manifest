@@ -3,7 +3,7 @@
 
   <!-- BEGIN trusty core projects -->
   <project path="trusty_os/external/lk" name="trusty/lk/common" groups="trusty" >
-    <copyfile src="makefile" dest="makefile" />
+    <copyfile src="makefile" dest="trusty_os/makefile" />
   </project>
   <project path="trusty_os/external/headers" name="trusty/external/headers" groups="trusty" />
   <project path="trusty_os/lib" name="trusty/lib" groups="trusty" />
@@ -32,7 +32,7 @@
   <!-- BEGIN trusty vendor projects -->
   <project path="trusty_os/vendor/google/aosp" name="trusty/vendor/google/aosp" groups="trusty" >
    <!-- Install lk_inc.mk into trusty root -->
-    <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
+    <copyfile src="lk_inc.mk" dest="trusty_os/lk_inc.mk" />
   </project>
   <!-- END trusty vendor projects -->
 
